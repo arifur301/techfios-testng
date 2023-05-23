@@ -35,17 +35,12 @@ public class TransferMoney {
 		Thread.sleep(3000);
 		// driver.findElement(By.linkText("Add Deposit")).click();
 // Fill in the new transfer form
-		
 		selectIndex("//select[@id='faccount']",2);
-		
 //		WebElement elementFrom = driver.findElement(By.xpath("//select[@id='faccount']"));
 //		Select select = new Select(elementFrom);
 //		select.selectByIndex(2);
-
 		Thread.sleep(3000);
-
 		selectIndex("//select[@id='taccount']", 5);
-	
 		Random rnd = new Random();
 		int randomNumber = rnd.nextInt(999);
 		driver.findElement(By.id("description")).sendKeys("Bata" + randomNumber);
@@ -53,11 +48,8 @@ public class TransferMoney {
 // Click on submit
 		driver.findElement(By.xpath("//button[@id='submit']")).click();
 		Thread.sleep(3000);
-
 // Validate transfer posted on the table
-
 	}
-
 	public void selectIndex(String xpath, int index) {
 		WebElement element = driver.findElement(By.xpath(xpath));
 		Select select = new Select(element);
